@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    max-width: 40%;
+    max-height: 40%;
+}
+body {
+    margin: 0;
+    width: 100%;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    background-color: #D2E2FB;
+    flex-grow: 1;
+    
+}
+
+
+.m-hsheet {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.header-text {
+    font-size: 24px;
+    color: #333;
+}
+
+.m-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: inherit;
+}
+
+.m-menu-item {
+    margin: 0 30px;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.u-section {
+    width: 100%; 
+    height: 880px;
+    margin: 80px 0 0 0;
+    padding: 7px 27px 7px 26px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px;
+    justify-content: left;
+    align-items: center;
+}
+
+
+
+
+.blue {
+    color: blue;
+    font-weight: bold;
+}
+.purpl {
+    color: #884FA4;
+    font-weight: bold;
+}
+.red {
+    color: red;
+    font-weight: bold;
+}
+.orange {
+    color: orange;
+    font-weight: bold;
+}
+.u-rounded-block {
+    background-color: rgba(244, 233, 233, 0.4);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    grid-column: span 1;
+    display: grid;
+    justify-content: start;
+    grid-auto-rows: minmax(0, auto);
+    /* width: calc((100% / 3)); */
+    box-sizing: border-box; 
+}
+
+.u-image {
+    grid-column: span 2; 
+}
+
+.u-image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px; 
+}
+
+.u-block-text {
+    text-align: justify;
+}
+
+.about {
+    max-width: -webkit-calc(800px - (30px * 2));
+    max-width: calc(800px - (30px * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+@media screen and (max-width: 800px) {
+    .about {
+        max-width: -webkit-calc(800px - (30px));
+        max-width: calc(800px - (30px));
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+.about h1 {
+    font-size: 40px;
+}
+
+dt {
+    float: left;
+    clear: left;
+    width: 450px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+dt::after {
+    content: ':';
+}
+
+dd {
+    margin: 0 0 0 40px;
+    padding: 0 0 0.5em 0;
+    width: 700px;
+}
+
+.ttooltip {
+    z-index: 99;
+}
+
+/* Вступительное*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 5%;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 40px;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+}
+
+header nav a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 99px;
+    transition: 0.3s;
+    color: white;
+}
+
+header nav a.active {
+    background: #5247B9;
+}
+
+header nav a:hover {
+    background: #5247B9;
+}
+
+header nav:hover>a:not(:hover) {
+    background: none;
+}
+
+.home {
+    display: flex;
+    height: 100dvh;
+    background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
+    position: relative;
+    overflow: hidden;
+}
+#abb {
+    overflow: auto;
+}
+
+.home svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.home .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke: 2px black;
+    /* Добавляем обводку шириной 2px черного цвета */
+}
